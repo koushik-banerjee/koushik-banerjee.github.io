@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="Header1">
         <div class="header-name">
             <h1><a href="index.html">Koushik</a></h1>
         </div>
@@ -26,6 +26,28 @@
         </div>
 
     </header>
+
+    <header class="header-2" id="Header2">
+        <div class="header-name">
+            <h1><a href="index.html">Koushik</a></h1>
+        </div>
+        <div class="header-image" id="headerImage" onclick="dis()">
+            <img src="./list.png" alt="menu" id="menu" />
+        </div>
+    </header>
+
+    <div class="header-links-2" id="headerLinks">
+        <div class="header-link-close">
+            <img src="./close.png" alt="" class="closeIcon" onclick="clos()" />
+        </div>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
 
     <section id="Home" data-aos="fade-up" data-aos-duration="800">
         <div class="home-1">
@@ -154,6 +176,18 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
     AOS.init();
+    function dis() {
+      document.getElementById("headerImage").style.display = "none";
+      document.getElementById("headerLinks").style.display = "flex";
+      document.getElementById("menuOverlay").style.display = "block";
+    }
+
+    function clos() {
+      document.getElementById("headerImage").style.display = "block";
+      document.getElementById("headerLinks").style.display = "none";
+      document.getElementById("menuOverlay").style.display = "none";
+    }
+
 </script>
 
 
