@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Tags</h1>
+    <form action="server.jsp" method="POST">
+
+        <p>
+            <input type="text" value="Aamir" readonly placeholder="Enter name" autofocus  required>
+
+        </p>
+        <p>
+            <input type="text" value="Aamir" disabled placeholder="Enter name" autofocus  required>
+            
+        </p>
+        <p>
+            <input type="text" maxlength="10" size="50px">
+        </p>
+        <!-- <input type="submit" value="SUBMIT"> -->
+        <!-- <input type="image" src="button.png" -->
+        <button>Submit</button>
+        <input type ="reset">
+    </form>
+    <fieldset>
+        <legend>Login form</legend>
+
+    
+    <form>
+        <p>
+            <input type="text" placeholder="Enter Email">
+        </p>
+        <p>
+            <input type="password" placeholder="password">
+        </p>
+    </form></fieldset>
+    <!-- <fieldset>
+        <lenged>Registration form</lenged>
+        <form action="" method="POST">
+            <input type="text" placeholder="Enter name">
+            <inputt type ="Email" aria-placeholder="Enter email"></inputt>
+            <input type="password" placeholder="password">
+            <p><input type="color"></p>
+            <p><input type="file"></p>
+            <p><input type="checkbox">MERN </p>
+            <p><input type="checkbox">JAVA </p>
+            <p>
+                <select>
+                    <optgroup label="India">
+                        <option>Delhi</option>
+                        <option>Punjab</option>
+                    </optgroup>
+                    <optgroup label="USA">
+                        <option>texas</option>
+                        <option>newyork</option>
+                    </optgroup>
+                </select>
+            </p>
+            
+        </form>
+    </fieldset> -->
+    <fieldset>
+      <legend>Registration Form</legend>
+    <form>
+        <p><input type="text" placeholder="Enter your name"></p>
+        <p><input type="text" placeholder="Enter your email"></p>
+        <p><input type="password" placeholder="Enter your password"></p>
+        <p><input type="date"></p>
+        <p><input type="checkbox">MERN
+        <input type="checkbox">Java
+        <input type="checkbox">Python </p>
+        <p>
+            <input type="radio"> Male
+            <input type="radio"> Female
+        </p>
+         <p><input type="color"></p>
+            <p><input type="file"></p>
+        <p><select multiple>
+            <optgroup label="India">
+            <option>Delhi</option>
+            <option>Chenni</option>
+            <option>Hyderabad</option>
+            </optgroup>
+            <optgroup label="Usa">
+            <option>Columbus</option>
+            <option>Jacksonvills</option>
+            <option>Miami</option>
+            </optgroup>
+        </select></p>
+
+        <p>
+            <textarea rows="4" cols="50" placeholder="About me"></textarea>
+        </p>
+        <p>
+            <input list="country">
+            <datalist id="country">
+                <option>INDIA</option>
+                <option>USA</option>
+                <option>UK</option>
+            </datalist>
+        </p>
+        <button>Register</button>
+    </form>
+    </fieldset>
+</body>
+</html>
