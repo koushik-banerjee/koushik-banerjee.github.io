@@ -1,0 +1,92 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+#root li {
+  border-radius: 10px;
+  border: 1px solid black;
+  list-style: none;
+  height: 10rem;
+
+}
+#root li div{
+    margin-top: 100px;
+}
+#root {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#card {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+
+
+.navbar{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+}
+
+.nav li{
+    background: none;
+}
+
+
+.footer{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 95vw;
+}

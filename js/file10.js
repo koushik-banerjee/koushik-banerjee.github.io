@@ -12,7 +12,7 @@ function increment(id) {
   cart = { ...cart, [id]: cart[id] + 1 };
 }
 function decrement(id) {
-  cart = { ...cart, [id]: cart[id] - 1 };
+    (cart[id]!==0) && (cart = { ...cart, [id]: cart[id] - 1 });
 }
 console.log('List of Products')
 console.log(products)
