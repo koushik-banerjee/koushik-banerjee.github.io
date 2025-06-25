@@ -7,6 +7,7 @@ const products = [
 
 function showProducts() {
   let str = "";
+  str+='<ul>';
   products.map(value => {
     str += `<li>
       ${value.name} - $${value.price} 
@@ -17,14 +18,22 @@ function showProducts() {
       </div>
     </li>`;
   });
+  str += `</ul>`;
   document.getElementById('root').innerHTML = str;
+}
+function cartCount(){
+  let count = 0;
+  for (let key in cart) {
+    count += cart[key];
+  }
+  document.getElementById("cart-count").innerHTML = `${count}`;
 }
 
 function addToCart(id) {
     if(!cart[id]){
         cart = { ...cart, [id]: 1 };
     }
-  showCart();
+    cartCount();
 }
 
 function increment(id) {
@@ -33,7 +42,7 @@ function increment(id) {
   } else {
     cart = { ...cart, [id]: 1 };
   }
-  showCart();
+  cartCount();
 }
 
 function decrement(id) {
@@ -42,11 +51,11 @@ function decrement(id) {
   } else {
     delete cart[id];
   }
-  showCart();
+  cartCount();
 }
 
 function showCart() {
-  let str1 = "<h3>Cart Items:</h3><ul>";
+  let str1 = "<h3>Cart Items:</h3><ul id='cart-show'>";
   products.map(value => {
     if (cart[value.id]) {
       str1 += `<li>${value.name} -- Qty: ${cart[value.id]} -- Total: $${cart[value.id] * value.price}</li>`;
@@ -59,8 +68,9 @@ function showCart() {
   }, 0);
 
   str1 += `<h4>Order Value: $${total}</h4>`;
-  document.getElementById("card").innerHTML = str1;
+  document.getElementById("root").innerHTML = str1;
+  showCart();
 }
 
 showProducts();
-showCart();
+cartCount();

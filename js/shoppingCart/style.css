@@ -3,7 +3,7 @@ html{
     padding: 0;
 }
 
-#root li {
+#root ul li {
   border-radius: 10px;
   border: 1px solid black;
   list-style: none;
@@ -13,7 +13,7 @@ html{
 #root li div{
     margin-top: 100px;
 }
-#root {
+#root ul {
   display: flex;
   justify-content: space-evenly;
 }
@@ -89,4 +89,12 @@ hr {
     position: absolute;
     bottom: 0;
     width: 95vw;
+}
+
+
+#card-show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
 }
