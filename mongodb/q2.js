@@ -38,3 +38,7 @@ db.employees.find({},{name:1}) // here it means name feild true it will show nam
 db.user.find({},{_id:false,name:true,age:true}) // here it means name and age feild true it will show name and age field only for all the employees here 1 means true and 0 means false
 
 
+db.employees.find({department:{$eq:"IT"}},{_id:0,name:1,salary:1});
+db.employees.find({salary:{$gt:2000}},{_id:1,name:1,salary:1});
+db.employees.find({salary:{$lt:5000}},{_id:1,name:1,salary:1});
+db.employees.find({salary:{$lte:5000}},{_id:1,name:1,salary:1});
