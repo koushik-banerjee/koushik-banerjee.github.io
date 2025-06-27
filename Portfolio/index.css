@@ -46,6 +46,28 @@ h1 {
 
 .header ul li a {
   color: #000;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.header ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.header ul li a:hover::after {
+  width: 100%;
+}
+
+.header ul li a:hover {
+  /* Optionally keep underline for accessibility */
 }
 
 /* Hamburger Header (Mobile) */
@@ -67,7 +89,7 @@ h1 {
 }
 
 .header-2 .header-image img:hover {
-  transform: rotate(90deg);
+  transform: scale(1.2);
 }
 
 /* Hamburger Menu Panel */
@@ -336,6 +358,7 @@ section {
   background-color: #fff;
   border-top: 1px solid #ccc;
   padding: 0 10%;
+  margin-top: 10px;
 }
 
 /* Media Queries */
@@ -390,6 +413,11 @@ section {
 }
 
 @media (max-width: 426px) {
+
+  .card{
+    width: 80%;
+  }
+
   .header .header-name h1 a {
     font-size: 20px;
   }
