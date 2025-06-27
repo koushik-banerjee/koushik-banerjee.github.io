@@ -41,4 +41,14 @@ db.user.find({},{_id:false,name:true,age:true}) // here it means name and age fe
 db.employees.find({department:{$eq:"IT"}},{_id:0,name:1,salary:1});
 db.employees.find({salary:{$gt:2000}},{_id:1,name:1,salary:1});
 db.employees.find({salary:{$lt:5000}},{_id:1,name:1,salary:1});
-db.employees.find({salary:{$lte:5000}},{_id:1,name:1,salary:1});
+db.employees.find({salary:{$lte:3000}},{_id:0,name:1,salary:1});
+db.employees.find({$or:[{salary:{$lte:3000}},{department:"IT"}]},{_id:0,name:1,salary:1});
+db.employees.find({$and:[{salary:{$lte:3000}},{department:"IT"}]},{_id:0,name:1,salary:1});
+db.employees.find(
+    {$or:[{},{}]}, // condition
+    {} // variable to show
+);
+
+db.employees.find({department:{$ne:"IT"}},{_id:0,name:1,salary:1,department:1});
+db.employees.find({department:{$in: ["Admin","HR"]}},{_id:0,name:1,salary:1,department:1});
+db.employees.find({department:{$nin: ["Admin","HR"]}},{_id:0,name:1,salary:1,department:1});
